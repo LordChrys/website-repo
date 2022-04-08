@@ -1,0 +1,631 @@
+*{
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+img{
+    width: 380px;
+    height: auto;
+}
+body{
+    background-color: #f1f1f1;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.navTitle a{
+    font-size: 70px;
+    padding: 20px 0px;
+    margin-top: 40px;
+    font-family: 'Parisienne', cursive;
+    text-decoration: none;
+}
+
+p{
+    font-size: 18px;
+}
+
+a{
+    color: #131313;
+}
+
+span{
+    padding: 0px 5px;
+}
+.navTop{
+    padding: 20px 0px;
+}
+
+/* #mobileMenu{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+} */
+.navToggle .bar{
+    display: block;
+    cursor: pointer;
+}
+
+.textTitle, .cardTitle, .podTitle{
+    color: #3a9679;
+}
+
+#contactNav, #about, #podcast, #servicesNav{
+    cursor: pointer;
+}
+
+
+/* NAV AREA */
+.nav{
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: #bfcbbf;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -60px 45px -18px inset;
+}
+
+.navMenu{
+    display: flex;
+    margin: 0px auto;
+    /* width: 100%; */
+}
+
+.navContent{
+    list-style: none;
+    text-align: center;
+    padding: 15px;
+    /* margin-bottom: 15px; */
+    justify-content: space-around;
+}
+
+.navOp{
+    display: inline;
+    font-size: 25px;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    width: 20px;
+    height: auto;
+}
+
+.navlink {
+    text-decoration: none;
+}
+
+
+.navOp:hover{
+    color: #131313;
+    background: #ececec;
+    transition: 0.5s ease-in;
+    /* transition: 0.3s ease-out; */
+}
+
+.hamburger{
+    background-color: transparent;
+    color: #131313;
+    cursor: pointer;
+    font-size: 40px;
+    display: none;
+}
+
+.hamburger:focus{
+    outline: none;
+}
+
+
+#contactNav{
+    scroll-behavior: smooth;
+}
+
+/* PAGE ONE: MAIN CONTENT */
+.main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #DDC8C4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.mainWrap{
+    padding: 0px 0;
+}
+
+
+.col{
+    width: match-parent;
+    margin:0px 40px ;
+    padding: 0px 40px;
+}
+
+
+.colWrap{
+    width: match-parent;
+    display: flex;
+    margin: 100px 30px;
+    list-style: none;
+    justify-content: center;
+}
+
+.contWrap{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    padding: 0px 10px 20px 10px;
+}
+
+.colItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.item{
+    justify-content: center;
+    width: 50%;
+
+}
+
+.textWrap{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 0px 25px;
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+
+p{
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
+}
+/* .text{
+    text-align: match-parent;
+} */
+
+.textRight{
+    text-align: left;
+    width: 100%;
+}
+.textTitle{
+    padding:15px 0px;
+}
+
+
+.image{
+    box-shadow: 0px 3px 10px rgb(0 0 0 / 0.7);
+    width:auto;
+    height:390px;
+    margin: 15px;
+    object-fit:contain;
+}
+
+.imageRight{
+    position: relative;
+    float: right;
+}
+
+.imageLeft{
+    /* margin-right: 60px; */
+    float: left;
+
+}
+
+
+/* PAGE TWO: ABOUT PAGE */
+
+.aboutCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    margin: 60px 0px;
+    justify-items: start;
+    align-items: center;
+}
+
+.aboutCard{
+    width: 90%;
+    align-self: center;
+}
+
+
+.cardContent{
+    padding: 16px;
+    width: 100%;
+}
+
+/* .cardWrap{
+
+} */
+
+
+.cardImg{
+    width: 100%;
+    height: 250px;
+    object-fit:cover;
+}
+
+.cardText{
+    width: match-parent;
+    overflow-wrap: break-word;
+    align-items: flex-start;
+
+    /* padding: 0px 10px; */
+    /* text-align: center; */
+}
+
+
+.contact{
+    width: 100%;
+    height: 300px;
+    align-content: center;
+    margin: 60px 0px;
+    background-image: url(/Pods/fern.jpg);
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    object-fit: contain;
+    background-size: 100% auto;
+}
+
+.contactWrap{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    /* width: 100%; */
+}
+
+.contactItem{
+    list-style: none;
+    text-decoration: none;
+    font-size: 50px;
+    display: inline;
+    padding: 20px;
+    color: #ffff;
+}
+ .contactWrap ul li a{
+    color: #ffff;
+ }
+
+
+.contactText p{
+    inline-size: 80%;
+    overflow-wrap: break-word;
+    text-align: center;
+    margin: 20px auto;
+    color: #ffff;
+}
+
+.contactIntro h4{
+    margin: 20px;
+    font-size: 30px;
+    color: #ffff;
+}
+
+
+/* PAGE THREE: PODCAST PAGE */
+
+.podIntro{
+    width: 90%;
+}
+
+.podHeading{
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5em;
+    background-color:#ebd5d5;
+}
+
+
+.podTitle h4{
+    padding: 15px;
+
+}
+
+.podIntroWrap{
+    display: flex;
+    margin: 0px auto;
+}
+
+.podText{
+    text-align: center;
+}
+
+.podNavWrap{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+}
+
+.podWrap{
+    width: 90%;
+    /* height: 90px; */
+    display: flex;
+    margin: 0px auto 100px auto;
+    list-style: none;
+    position: static;
+    /* overflow: scroll; */
+}
+
+.podItem{
+    display: flex;
+    padding: 10px 0px 30px 0px ;
+    margin: 60px 0px;
+    flex-direction: row;
+}
+
+.podContent{
+    padding-right: 100px;
+}
+
+.podLinks{
+    font-size: 22px;
+}
+
+.sqr{
+    padding: 0px 30px;
+    width:230px;
+    height:230px;
+    object-fit:cover;
+}
+
+.podIntro{
+    padding: 60px;
+    text-align: center;
+    background-image: url("/Pods/BeachPink.jpg");
+    background-position: center center;
+    object-fit: cover;
+    background-size: 100% auto;
+}
+    /* min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 60px; */
+
+
+
+    /* Services Page */
+
+    .servIntroWrap{
+        text-align: center;
+        padding: 20px 0px;
+        margin: 40px 120px;
+    }
+
+    .serviceTopText{
+        padding-top: 30px;
+    }
+
+    .sTop, .sMid, .sBottom{
+        /* min-height: 500px; */
+        background-attachment: fixed;
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 60px;
+    }
+
+
+    .services{
+        width: auto;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        background-image:url("/Pods/TreesTop.jpeg");
+        margin: 60px 0px;
+    }
+
+    .sMid{
+        background-image:url("/Pods/CrystalsPink.jpg");
+        background-position: center center;
+        object-fit: contain;
+        background-size: 100% auto;
+    }
+
+    .sBottom{
+        background-image:url("/Pods/SmokingMatches.jpg");
+        background-position: center center;
+        object-fit: contain;
+        background-size: 100% auto;
+    }
+    
+    .serviceWrap{
+        align-content: center;
+    }
+    
+    
+    .serviceTextWrap{
+        align-items: center;
+        margin: 10px 120px 50px 120px;
+        padding: 80px 0px;
+    }
+    
+    .serviceText {
+        text-align: center;
+        margin: 0px 10px;
+        left: 50%;
+        color: #ffff;
+        /* display: flex; */
+    }
+
+/* FOOTER SECTION */
+.footer{
+    position: relative;
+    background-color: #b5d4b3;
+    bottom: 0;
+    height: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;  
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footerTitle{
+    font-size: 50px;
+    padding: 0px auto;
+    font-family: 'Parisienne', cursive;
+    text-decoration: none;
+}
+
+.fMain{
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    margin:0px; 
+    padding:0px;
+    grid-template-columns: 1fr;    
+    background-color: #bfcbbf;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 50px 39px -28px inset;
+
+}
+
+.footerContent{
+    display: flex;
+    font-size: 25px;
+    padding: 20px 0px;
+}
+
+.z{
+    font-size: 20px;
+    margin-top: 5px;
+    color: #ececec;
+    opacity: 0.5;
+}
+.footerTitle{
+    padding-top: 30px;
+}
+
+
+.fLink{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+.footerSocial{
+    padding: 0px 20px;
+    font-size: 35px;
+}
+
+/* MOBILE RESIZING */
+
+
+
+@media screen and (max-width: 480px) {
+    .nav, .main, .mainWrap, .footer{
+        width: 100%;
+    }
+
+    .navTitle a{
+        /* display: flex; */
+        /* flex-direction: column; */
+        font-size: 35px;
+        margin-right: 55px;
+        overflow-wrap: break-word;
+    }
+
+}
+
+
+@media screen and (max-width: 768px){
+    .nav, .main, .footer, .mainWrap{
+        width: 100%;
+        margin: 0px;
+    }
+
+    .colItem{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .textWrap{
+        overflow-wrap: break-word;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+        position: fixed;
+        z-index: 100;
+        top: 2rem;
+        right: 3rem;
+        padding: 4px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+      }
+    
+      .closeIcon {
+        display:none;
+      }
+    
+      .navContent {
+        position: fixed;
+        transform: translateX(100%);
+        transition: transform 1s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -99;
+        background: blueviolet;
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
+        /* width: 1000px; */
+      }
+    
+      .showMenu {
+        transform: translateX(0);
+        transition: transform 1s;
+        width: 50%;
+      }
+    
+    .navOp{
+        color: black;
+        font-size: 30px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        text-align: center;
+        
+    }
+    
+    #about, #podcast, #contactNav, #servicesNav{
+        width: 150px;
+        
+    } 
+
+    #menu{
+        position: absolute;
+        top: 25%;
+        right: 5%;
+        
+        /* transform: translate(5%, 20%); */
+    }
+
+    .colItem{
+        display: flex;
+        /* flex-direction: row; */
+        grid-template-columns: 1fr;
+    }
+
+    
+}
