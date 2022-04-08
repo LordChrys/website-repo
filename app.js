@@ -28,32 +28,3 @@ function toggleMenu() {
 }
 
 hamburger.addEventListener("click", toggleMenu);
-
-
-
-
-
-
-
-
-
-// // pSwitch = (scroll) =>{
-
-// //     scroll();
-// // }
-
-
-// // const pageScroll = () => {
-// //     window.scrollTo(0,50); // horizontal and vertical scroll increments
-// //     scrolldelay = setTimeout('pageScroll()',5000); // scrolls every 100 milliseconds
-// // }
-
-
-// // setTimeout(0, 5000);
-//     // window.scrollTo(0, 1350);
-//     // document.getElementById('#class').scrollIntoView();
-//     // contact.scrollIntoView();
-//     // window.scrollTo(0,findPos(document.getElementsByClassName(".contact")));
-//     // window.scrollTo(0,document.body.scrollHeight())
-
-
