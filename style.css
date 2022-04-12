@@ -5,8 +5,12 @@
 }
 img{
     max-width: 100%;
+    height: auto;
     display: block;
     box-shadow: 0px 3px 10px rgb(0 0 0 / 0.7);
+    cursor: pointer;
+    border-radius: .195rem;
+
 }
 body{
     background-color: #f1f1f1;
@@ -18,12 +22,12 @@ body{
     margin: 0px auto;
     display: flex;
 }
-/* .navMenu{
+.navMenu{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-} */
+}
 .nav{
     box-shadow: rgba(0, 0, 0, 0.25) 0px -60px 45px -18px inset;
     display: flex;
@@ -41,12 +45,19 @@ h1 a{
     background-color: #DDC8C4;
     z-index: 1;
 }
-
-
 .hamburger{
     display: none;
 }
+.navMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
 
+.navNav{
+    padding: 1rem 0;
+}
 .navOp{
     display: inline;
     font-size: 25px;
@@ -55,6 +66,7 @@ h1 a{
     padding: 10px 20px;
     width: 20px;
     height: auto;
+    cursor: pointer;
 }
 
 .nav, .footer{
@@ -69,6 +81,15 @@ h1 a{
     font-size: 2em;
 }
 
+.navLinks{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navSocial{
+    padding: 0 2rem;
+}
+
 
 /* MAIN PAGE */
 
@@ -77,7 +98,7 @@ h1 a{
     flex-wrap: wrap;
     list-style: none;
 }
-.contWrap, .podItem{
+.contWrap{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -85,16 +106,17 @@ h1 a{
     padding: 20px;
     column-gap: 20px;
 }
-.textTile{
+/* .textTile{
     text-align: center;
-}
+} */
 .col{
     padding: 0px 20px;
 }
-.textText{
+.textText, .podtext, .textTile{
     padding: 10px;
     width: 80%;
     margin: 0 auto;
+    text-align: center;
 }
 .item{
     width: 50%;
@@ -155,31 +177,100 @@ h1 a{
     margin: 0 2.5rem;
 } */
 
+.podImgWrap{
+    display: flex;
+    width: 60%;
+    content: "";
+    
+    
+}
+
+
 .podImage{
-    width: 208;
-    height: 208;
+    display: flex;
+    /* width: clamp(10em, 3rem + 40vw, 70rem); */
+    /* height: 12rem;
+    width: 45rem;
+    height: auto;*/
     object-fit: cover;
-    margin: 1rem;
+    /* margin: 1rem; */
+    width: 100%;
+}
+
+.podImage:after{
+    display: block;
+    padding-bottom: 100%;
 }
 
 .podItem{
     display: flex;
-    gap: 3rem 2em;
+    flex-direction: row;
+    column-gap: 1rem;
+    margin-bottom: 3rem;
 }
 
-/* .description{
-    padding: 0 1rem;
-    display:flex;
-    font-size: 1.1rem;
+/* .podImgWrap{
+    padding: 1rem;
 } */
 
-.podContent{
-    padding: 1rem;
+.podTitle{
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 2rem;
+
 }
 
 
+.description{
+    padding: 0rem .50rem;
+    display:flex;
+    font-size: clamp(0.1em, 0.125rem + 4vw, 1.125rem);
+    text-align: left;
+    /* height: auto; */
+}
+
+.podContent{
+    padding: .50rem;
+    /* width: clamp(0.1rem, 2rem + 120vw, 30rem); */
+}
+.podLinks{
+    padding-left:.50rem;
+}
 
 /* PODCAST PAGE END */
+/* SERVICES PAGE */
+.service{
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.sTop{
+    background-image: url(/Pods/CrystalsBlack.jpg);
+    background-position: center center;
+    object-fit: contain;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.sMid{
+    background-image: url(/Pods/TreesTop.jpeg);
+    background-position: center center;
+    object-fit: contain;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.sBottom{
+    background-image: url(/Pods/SmokingMatches.jpg);
+    background-position: center center;
+    object-fit: contain;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+/* SERVICES PAGE END */
 
 
 
@@ -204,6 +295,7 @@ h1 a{
 
 .footerTitle{
     font-size: clamp(0.2rem, 1rem + 4vw, 2.6rem);
+    cursor: pointer;
 }
 
 .rights{
@@ -231,6 +323,11 @@ h1 a{
     .nav, .main, .footer{
         width: 100%;
         display: flex;
+    }
+
+    .podItem{
+        flex-wrap: wrap;
+
     }
 }
 
@@ -302,8 +399,6 @@ h1 a{
 
     .colItem{
         display: flex;
-        /* flex-direction: row; */
-        /* grid-template-columns: 1fr; */
     }
 
     .contWrap{
