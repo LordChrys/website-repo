@@ -13,7 +13,7 @@ img{
 
 }
 body{
-    background-color: #f1f1f1;
+    background-color: #f1f2eb;
     opacity: 0;
     transition: opacity .5s;
 }
@@ -33,16 +33,28 @@ body{
     display: flex;
     flex-direction: row;
 }
+
+/* .navTitle a{
+
+} */
+
 .navTitle a, .footerTitle{
     font-family: 'Parisienne', cursive;
     text-decoration: none;
     color: black; 
 }
 h1 a{
-    font-size: clamp(0.2rem, 1rem + 5vw, 3rem);
+    font-size: clamp(0.2rem, 1rem + 5vw, 4rem);
 }
 .main{
-    background-color: #DDC8C4;
+    background-color: #e7cad9;
+    /* background: linear-gradient(
+        to bottom right,
+        #e7cad1 0%,
+        #e7cad1 50%,                                                                 
+        #5d5d5d 50%,
+        #5d5d5d 100%
+    ); */
     z-index: 1;
 }
 .hamburger{
@@ -60,25 +72,30 @@ h1 a{
 }
 .navOp{
     display: inline;
-    font-size: 25px;
+    font-size: 23px;
     text-decoration: none;
     box-sizing: border-box;
     padding: 10px 20px;
-    width: 20px;
     height: auto;
     cursor: pointer;
+    /* border: #444444 1px solid;
+    background-color: #ffebd3; */
+    margin: 0 .25rem;
 }
 
+
+
 .nav, .footer{
-    background-color: #bfcbbf;
+    background-color: #679186;
     padding: 1.5em;
     z-index: 100;
 }
 
-.navSocial {
+.navSocial a{
+    color: #34456e;
     display: inline-flex;
-    padding: 10px;
     font-size: 2em;
+    text-decoration: none;
 }
 
 .navLinks{
@@ -104,6 +121,7 @@ h1 a{
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin: 0 auto;
     column-gap: 20px;
 }
 /* .textTile{
@@ -118,9 +136,25 @@ h1 a{
     margin: 0 auto;
     text-align: center;
 }
+
+
 .item{
-    width: 50%;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
     text-align: center; 
+}
+
+.image{
+    width: 400px;
+    height: auto;
+    align-self: center;
+    float: right;
+    margin: 1rem;
+}
+
+.imageRight{
+    float: left;
 }
 
 /* MAIN PAGE END */
@@ -128,33 +162,57 @@ h1 a{
 .aboutCards{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    justify-content: space-around;
     padding: 20px;
-    gap: 3rem 2rem;
+    gap: 1rem;
 }
+
+/* CONTACT AREA  */
+.contact{
+    width: 100%;
+    background-image: url(/Pods/Green.jpg);
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5rem 0;
+}
+.contactIntro{
+    padding: 2rem;
+}
+
 .contactWrap{
     display: flex;
     flex-direction: column;
     align-content: center;
     text-align: center;
     padding: 20px;
+    color: #f1f1f1;
+    
 
 }
 
 .cardImg{
+    max-width: 100%;
     display: flex;
-    align-items: flex-start;
+    width: 450px;
+    height: 250px;
     object-fit:cover;
     margin-top: 2.5rem;
-    margin-bottom:0.6rem ;
+    margin-bottom: 1.5rem ;
 }
 
 .contactItem{
     list-style: none;
     display: inline-flex;
-    padding: 1rem;
+    padding: 10px;
     font-size: 1.7rem;
+}
+
+.contactItem a{
+    font-size: 2.2rem;
+    color: #f1f1f1;
 }
 
 
@@ -173,15 +231,10 @@ h1 a{
     padding: 2.5rem;
 }
 
-/* .podContent{
-    margin: 0 2.5rem;
-} */
-
 .podImgWrap{
     display: flex;
     width: 60%;
     content: "";
-    
     
 }
 
@@ -209,10 +262,6 @@ h1 a{
     margin-bottom: 3rem;
 }
 
-/* .podImgWrap{
-    padding: 1rem;
-} */
-
 .podTitle{
     text-align: center;
     padding: 10px;
@@ -227,12 +276,10 @@ h1 a{
     display:flex;
     font-size: clamp(0.1em, 0.125rem + 4vw, 1.125rem);
     text-align: left;
-    /* height: auto; */
 }
 
 .podContent{
     padding: .50rem;
-    /* width: clamp(0.1rem, 2rem + 120vw, 30rem); */
 }
 .podLinks{
     padding-left:.50rem;
@@ -243,30 +290,43 @@ h1 a{
 .service{
     padding: 1rem;
     margin-bottom: 3rem;
+    color: #f1f1f1;
+}
+.sText{
+    margin-bottom: 3rem;
+}
+.sTitle{
+    margin-top: 2.5rem;
 }
 
 .sTop{
-    background-image: url(/Pods/CrystalsBlack.jpg);
+    background-image: url(/Pods/LampCrystal.jpg);
     background-position: center center;
-    object-fit: contain;
-    background-size: 100% auto;
+    max-height: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 .sMid{
     background-image: url(/Pods/TreesTop.jpeg);
     background-position: center center;
-    object-fit: contain;
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .sBottom{
     background-image: url(/Pods/SmokingMatches.jpg);
     background-position: center center;
-    object-fit: contain;
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+.serviceBg{
+    right: 0;
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
 }
 
 
@@ -275,6 +335,10 @@ h1 a{
 
 
 /* FOOTER START */
+
+.footer{
+    background-color: #444444;
+}
 .fMain{
     display: flex;
     flex-direction: column;
@@ -289,19 +353,24 @@ h1 a{
 }
 
 .fc{
-    margin-bottom: 1.5rem;
+    padding: 1rem 0;
     font-size: clamp(0.1rem, 1rem + 10vw, 1.6rem);
+    color: #f1f1f1;
+}
+.fc a{
+    color: #f1f1f1;
 }
 
 .footerTitle{
     font-size: clamp(0.2rem, 1rem + 4vw, 2.6rem);
     cursor: pointer;
+    color: #f1f1f1;
 }
 
 .rights{
     font-size: clamp(0.9rem, 0.4rem + 1.5vw, 1.2rem);
     margin: 0 auto;
-    /* padding-bottom: 10rem; */
+    color: #f1f1f1;
 
 }
 
@@ -309,10 +378,15 @@ h1 a{
     font-size: 30px;
 }
 
+.designer{
+    padding-top: 1.5rem;
+}
+
 .Des{
     font-size: clamp(0.25rem, 0.8rem + 2vw, 1.3rem);
     color: #ececec;
-    opacity: 0.5;
+    opacity: 0.2;
+    margin-top: 5rem;
     
 }
 
@@ -330,7 +404,6 @@ h1 a{
 
     }
 }
-
 
 @media screen and (max-width: 480px) {
     
@@ -385,7 +458,6 @@ h1 a{
     
     #about, #podcast, #contactNav, #servicesNav{
         width: 150px;
-        
     } 
 
     #menu{
@@ -393,12 +465,11 @@ h1 a{
         top: 4%;
         right: 5%;
         font-size: 150%;
-        
-        /* transform: translate(5%, 20%); */
     }
 
     .colItem{
         display: flex;
+        
     }
 
     .contWrap{
