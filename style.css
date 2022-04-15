@@ -13,7 +13,7 @@ img{
 
 }
 body{
-    background-color: #f1f2eb;
+    background-color: #ffff;
     opacity: 0;
     transition: opacity .5s;
 }
@@ -33,28 +33,11 @@ body{
     display: flex;
     flex-direction: row;
 }
-
-/* .navTitle a{
-
-} */
-
-.navTitle a, .footerTitle{
-    font-family: 'Parisienne', cursive;
-    text-decoration: none;
-    color: black; 
-}
 h1 a{
     font-size: clamp(0.2rem, 1rem + 5vw, 4rem);
 }
 .main{
     background-color: #e7cad9;
-    /* background: linear-gradient(
-        to bottom right,
-        #e7cad1 0%,
-        #e7cad1 50%,                                                                 
-        #5d5d5d 50%,
-        #5d5d5d 100%
-    ); */
     z-index: 1;
 }
 .hamburger{
@@ -82,9 +65,6 @@ h1 a{
     background-color: #ffebd3; */
     margin: 0 .25rem;
 }
-
-
-
 .nav, .footer{
     background-color: #679186;
     padding: 1.5em;
@@ -107,8 +87,25 @@ h1 a{
     padding: 0 2rem;
 }
 
-
-/* MAIN PAGE */
+                                                    /* TEXT CONTROL */
+.navTitle a, .footerTitle{
+    font-family: 'Parisienne', cursive;
+    text-decoration: none;
+    color: black; 
+}
+.introTitle{
+    padding: 1rem;
+}
+.introText{
+    margin-bottom: 2rem;
+}
+.textText, .podtext, .textTile{
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+                                                        /* MAIN PAGE */
 
 .colWrap, .colItem{
     display: flex;
@@ -124,20 +121,9 @@ h1 a{
     margin: 0 auto;
     column-gap: 20px;
 }
-/* .textTile{
-    text-align: center;
-} */
 .col{
     padding: 0px 20px;
 }
-.textText, .podtext, .textTile{
-    padding: 10px;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-
 .item{
     box-sizing: border-box;
     width: 100%;
@@ -157,18 +143,37 @@ h1 a{
     float: left;
 }
 
-/* MAIN PAGE END */
-/* ABOUT PAGE */
+.intro{
+    padding: 1rem;
+    margin: 3rem auto;
+}
+
+                                                        /* MAIN PAGE END */
+                                                        /* ABOUT PAGE */
 .aboutCards{
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: space-around;
-    padding: 20px;
-    gap: 1rem;
+    padding: 1rem;
+    /* gap: 1rem; */
 }
 
-/* CONTACT AREA  */
+.cardImg{
+    max-width: 100%;
+    display: flex;
+    width: 450px;
+    height: 250px;
+    object-fit:cover;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem ;
+}
+.cardContent{
+    display: block;
+    margin: .5rem;
+}
+
+
+                                                        /* CONTACT AREA  */
 .contact{
     width: 100%;
     background-image: url(/Pods/Green.jpg);
@@ -189,18 +194,6 @@ h1 a{
     text-align: center;
     padding: 20px;
     color: #f1f1f1;
-    
-
-}
-
-.cardImg{
-    max-width: 100%;
-    display: flex;
-    width: 450px;
-    height: 250px;
-    object-fit:cover;
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem ;
 }
 
 .contactItem{
@@ -209,15 +202,17 @@ h1 a{
     padding: 10px;
     font-size: 1.7rem;
 }
-
 .contactItem a{
     font-size: 2.2rem;
     color: #f1f1f1;
 }
 
+                                                            /* ABOUT PAGE END */
+                                                            /* PODCAST PAGE */
 
-/* ABOUT PAGE END */
-/* PODCAST PAGE */
+.podWrap{
+    justify-content: center;
+}
 
 .podIntro{
     display: flex;
@@ -226,33 +221,21 @@ h1 a{
 
 .podList{
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     list-style: none;
     padding: 2.5rem;
 }
-
 .podImgWrap{
     display: flex;
-    width: 60%;
-    content: "";
-    
+    max-width: 13rem;
+    max-height: 13rem;
+    object-fit: cover;   
 }
-
-
 .podImage{
-    display: flex;
-    /* width: clamp(10em, 3rem + 40vw, 70rem); */
-    /* height: 12rem;
-    width: 45rem;
-    height: auto;*/
+    display: inline-block;
+    margin: .50rem;
     object-fit: cover;
-    /* margin: 1rem; */
     width: 100%;
-}
-
-.podImage:after{
-    display: block;
-    padding-bottom: 100%;
 }
 
 .podItem{
@@ -267,59 +250,63 @@ h1 a{
     padding: 10px;
     margin: 0 auto;
     font-size: 2rem;
-
 }
-
 
 .description{
     padding: 0rem .50rem;
     display:flex;
     font-size: clamp(0.1em, 0.125rem + 4vw, 1.125rem);
     text-align: left;
+    /* height: auto; */
 }
 
 .podContent{
     padding: .50rem;
+    /* width: clamp(0.1rem, 5rem + 900vh, 30rem); */
+    width: auto;
 }
 .podLinks{
     padding-left:.50rem;
 }
 
-/* PODCAST PAGE END */
-/* SERVICES PAGE */
+                                                            /* PODCAST PAGE END */
+                                                            /* SERVICES PAGE */
 .service{
     padding: 1rem;
     margin-bottom: 3rem;
     color: #f1f1f1;
 }
+.servIntroWrap, .podIntroWrap, .aboutIntroWrap{
+    border: 1px solid #444444;
+    width: 80%;
+    margin: 0 auto;
+    /* background-color: #258EA6; */
+    /* opacity: 0.5; */
+
+}
 .sText{
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 .sTitle{
     margin-top: 2.5rem;
 }
 
-.sTop{
-    background-image: url(/Pods/LampCrystal.jpg);
+.sTop, .sMid, .sBottom{
     background-position: center center;
-    max-height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    
 }
 
+    
+.sTop {
+    background-image: url(/Pods/LampCrystal.jpg);
+}
 .sMid{
     background-image: url(/Pods/TreesTop.jpeg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .sBottom{
     background-image: url(/Pods/SmokingMatches.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .serviceBg{
@@ -329,12 +316,8 @@ h1 a{
     object-fit: cover;
 }
 
-
-/* SERVICES PAGE END */
-
-
-
-/* FOOTER START */
+                                                                    /* SERVICES PAGE END */
+                                                                    /* FOOTER START */
 
 .footer{
     background-color: #444444;
@@ -371,7 +354,6 @@ h1 a{
     font-size: clamp(0.9rem, 0.4rem + 1.5vw, 1.2rem);
     margin: 0 auto;
     color: #f1f1f1;
-
 }
 
 .footerLinks{
@@ -387,11 +369,10 @@ h1 a{
     color: #ececec;
     opacity: 0.2;
     margin-top: 5rem;
-    
 }
 
-/* FOOTER END */
-
+                                                                        /* FOOTER END */
+                                                            /* MOBILE ADJEUSTMENTS */
 
 @media screen and (max-width:810px) {
     .nav, .main, .footer{
@@ -401,9 +382,23 @@ h1 a{
 
     .podItem{
         flex-wrap: wrap;
-
     }
+
+    .description{
+        padding: 0;
+    }
+
+    /* .contactItems{
+        margin-bottom: 2rem;
+    }
+
+    .contHead{
+        padding-top: 2rem;
+    } */
+
+  
 }
+
 
 @media screen and (max-width: 480px) {
     
@@ -421,6 +416,10 @@ h1 a{
     
       .closeIcon {
         display:none;
+      }
+
+      .navTitle{
+          float: left;
       }
     
       .navContent, .navLinks {
@@ -458,6 +457,7 @@ h1 a{
     
     #about, #podcast, #contactNav, #servicesNav{
         width: 150px;
+        
     } 
 
     #menu{
@@ -465,11 +465,14 @@ h1 a{
         top: 4%;
         right: 5%;
         font-size: 150%;
+        
+        /* transform: translate(5%, 20%); */
     }
 
     .colItem{
         display: flex;
-        
+        /* flex-direction: row; */
+        /* grid-template-columns: 1fr; */
     }
 
     .contWrap{
